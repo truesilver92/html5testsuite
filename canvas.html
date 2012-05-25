@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  <header>
+    <title>HTML5 Canvas</title>
+  </header>
+
+  <body>
+
+    <h1>HTML5 Canvas</h1>
+
+    <h4>The canvas is a graphics drawing location for scripting</h4>
+
+    <canvas id="myCanvas" width="200" height="100">
+      Canvas does not work on your browser
+    </canvas>
+
+    <h4>Draw with javascript in a canvas (otherwise it is useless)</h4>
+
+    <script type="text/javascript">
+      var c=document.getElementById("myCanvas");
+      var ctx=x.getContext("2d");
+      ctx.fillStyle="#FF0000";
+      ctx.fillRect(0,0,150,75);
+      ctx.moveTo(10,10);
+      ctx.lineTo(150,50);
+      ctx.lineTo(10,50);
+      ctx.stroke();
+    </script>
+
+  </body>
+</html>
