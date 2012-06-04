@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Geolocation</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Geolocation</h1>
+
+    <h4>Used to locate the user's position. It works more accuatly when on a device that contains gps hardware</h4>
+
+    <script>
+      var x=document.getElementById("demo");
+      function getLocation()
+      {
+        if (navigator.geolocation)
+        {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        }
+      
+        else
+        {
+          x.innerHTML="Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position)
+      {
+        x.innerHTML="Latitude: " + position.coords.latitude + "<br />Longitude: " + position.coords.longitude;
+      }
+    </script>
+
+  </body>
+
+</html>
