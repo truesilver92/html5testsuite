@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Web Storage</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Web Storage</h1>
+
+    <h4>This is stuff that may be stored on the local computer by the web page<</h4>
+										   <h4>localStorage and sessionStorage</h4>
+
+										   <p>localStorage - has no expiration date</p>
+
+										   <p>sessionStorage - stores data for one session</p>
+
+										   <h4>localStorage example</h4>
+
+										   <div id="result"></div>
+										   <script>
+										     if(typeof(Storage)!=="undefined")
+										     {
+										     localStorage.lastname="Smith";
+										     document.getElementById("result")innerHTML="Last name: " + localStorage.lastname;
+										     }
+										     else
+										     {
+										     document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+										     }
+										   </script>
+
+										   <h4>There seems to be a problem with a lot of the examples. It may be that my browser is not updated enough. It also may mean that this site does not have good examples</h4>
+
+  </body>
+</html>
