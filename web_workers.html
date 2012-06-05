@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Web Workers</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Web Workers</h1>
+
+    <p>
+      When executing scripts in an HTMLpage, the page becomes unresponsive until the script is finished.<br /><br />A web worker is a Script that runs in the background, independently of other scripts, without affecting the performance of the page/asyncronesly. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+    </p>
+
+    <h4>Web Worker example</h4>
+
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button><br /><br />
+
+    <script>
+      var w;
+
+      function startWorker()
+      {
+        if(typeof(Worker)!="undefined")
+        {
+          if(typeof(w)=="undefined")
+          {
+            w=new Worker("demo_workers.js");
+          }
+          w.onmessage = function(event)
+          {
+            document.getElementById("result").innerHTML=event.data;
+          };
+        }
+        else
+        {
+          document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+        }
+      }
+
+      function stopWorker()
+      {
+        w.terminate();
+      }
+    </script>
+
+    <h4>Since web workers are in external files, they do not have access the the following JavaScript objects:</h4>
+    <ul>
+      <li>The window object</li>
+      <li>The document object</li>
+      <li>The parent object</li>
+    </ul>
+
+  </body>
+</html>
