@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Application Cache</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Application Cache</h1>
+
+    <h4>Application Cache means that resources that are used often by the web site may be kept on the local computer and referenced by other web pages so that the information does not have to be downloaded again</h4>
+
+    <h4>Include the manifest attribute in the documet's html tag to give the browser the appcache file containing the list of stuff to cache</h4>
+
+    <p>
+      [html manifest="demo.appcache"] The manifest file needs to be served with the correct MIME-type, which is "text/cache-manifest". This setting must be configured on the web server.
+    </p>
+
+    <h2>How the Cache Manifest file works</h2>
+
+    <p>
+      CACHE MANIFEST<br />
+      /theme.css<br />
+      /logo.gif<br />
+      /main.js
+    </p>
+
+    <h4>The line cache manifest is required. The 3 files below it will be cached</h4>
+    <h4>The Network section means that the files will never be cached</h4>
+
+    <p>
+      NETWORK:<br />
+      login.asp
+    </p>
+
+    <h4>Use an * if you want all other files to use an internet connection</h4>
+
+    <h4>The fallback section contains network files and their replacements in case there is no internet connection</h4>
+
+    <p>
+      FALLBACK:<br />
+      /html5/ /offline.html
+    </p>
+
+    <h4>If any file in the html5 folder cannot be accessed then offline.html will be used instead</h4>
+
+    <h3>Updating the Cache</h3>
+
+    <ul>Once an application is cached, it remains cached until one of the following happens:
+      <li>The user clears the browser's cache</li>
+      <li>The manifest file is modified (see tip below)</li>
+      <li>The application cache is programmatically updated</li>
+    </ul>
+
+    <h4>Example - Complete Cache Manifest File</h4>
+
+    <p>
+      CACHE MANIFEST<br />
+      # 2012-02-21 v1.0.0<br />
+      /theme.css<br />
+      /logo.gif<br />
+      /main.js<br /><br />
+
+      NETWORK:<br />
+      login.asp<br /><br />
+
+      FALLBACK:<br />
+      /html5/ /offline.html
+    </p>
+
+    <h4>The cache is only updated when the manifest file changes so you can use a comment "#" line that changes, but does not change the functionality of the caching</h4>
+
+    <h4>Warnings with caching</h4>
+
+    <ul>
+      <li>The cached version will always be prefered even if your site has a newer version</li>
+      <li>Browsers have different limits for the size of each site's cache. Some are 5mb limit per site</li>
+    </ul>
+
+  </body>
+</html>
