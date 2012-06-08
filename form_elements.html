@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Form Elements</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Form Elements</h1>
+
+    <h4>these are the new ones</h4>
+
+    <ul>
+      <li>datalist</li>
+      <li>keygen</li>
+      <li>output</li>
+    </ul>
+
+    <h4>datalist is like an autocomplete input element</h4>
+
+    <input list="browsers" />
+
+    <datalist id="browsers">
+      <option value="internet explorer" />
+      <option value="firefox" />
+      <option value="chrome" />
+      <option value="opera" />
+      <option value="safari" />
+    </datalist>
+
+    <h4>keygen helps create a secure way to authenticate users</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_keygen.asp" method="get">
+      Username: <input type="text" name="usr_name" />
+      Encryption: <keygen name="security" />
+      <input type="submit" />
+    </form>
+
+    <h4>output represents the result of a calculation (like one performed by a script)</h4>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0
+      <input type="range" name="a" value="50" />
+      100+
+      <input type="number" name="b" value="50" />
+      =
+      <output name="x" for="a b"></output>
+    </form>
+
+  </body>
+</html>
