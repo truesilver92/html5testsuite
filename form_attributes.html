@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>HTML5 Form Attributes</title>
+  </head>
+
+  <body>
+
+    <h1>HTML5 form Attributes</h1>
+
+    <h4>New attributes for form:</h4>
+
+    <ul>
+      <li>autocomplete</li>
+      <li>novalidate</li>
+    </ul>
+
+    <h4>New attributes for input:</h4>
+
+    <ul>
+      <li>autocomplete</li>
+      <li>autofocus</li>
+      <li>form</li>
+      <li>formaction</li>
+      <li>formenctype</li>
+      <li>formmethod</li>
+      <li>formnovalidate</li>
+      <li>formtarget</li>
+      <li>height and width</li>
+      <li>list</li>
+      <li>min and max</li>
+      <li>multiple</li>
+      <li>pattern (regexp)</li>
+      <li>placeholder</li>
+      <li>required</li>
+      <li>step</li>
+    </ul>
+
+    <h4>Autocomplete attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp" autocomplete="on">
+      First name: <input type="text" name="fname" /><br />
+      Last name: <input type="text" name="lname" /><br />
+      E-mail: <input type="email" name="email" autocomplete="off" /><br />
+      <input type="submit" />
+    </form>
+
+    <h4>form novalidate attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp" novalidate="novalidate">
+      E-mail: <input type="email" name="user_email" />
+      <input type="submit" />
+    </form>
+
+    <h4>input autofocus attribute</h4>
+
+    First name:<input type="text" name="fname" autofocus="autofocus" />
+
+    <h4>input form attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp" id="form1">
+      First name: <input type="text" name="fname" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    Last name: <input type="text" name="lname" form="form1" />
+
+    <h4>input formaction attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp">
+      First name: <input type="text" name="fname" /><br />
+      Last name: <input type="text" name="lname" /><br />
+      <input type="submit" value="Submit" /><br />
+      <input type="submit" formaction="http://www.w3schools.com/html5/demo_admin.asp" value="Submit as admin" />
+    </form>
+
+    <h4>input formenctype attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_post_enctype.asp" method="post">
+      First name: <input type="text" name="fname" /><br />
+      <input type="submit" value="Submit" />
+      <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data" />
+    </form>
+
+    <h4>input formmethod attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp" method="get">
+      First name: <input type="text" name="fname" /><br />
+      Last name: <input type="text" name="lname" /><br />
+      <input type="submit" value="Submit" />
+      <input type="submit" formmethod="post" formaction="http://www.w3schools.com/html5/demo_post.asp" value="Submit using POST" />
+    </form>
+
+    <h4>input formnovalidate attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp">
+      E-mail: <input type="email" name="userid" /><br />
+      <input type="submit" value="Submit" /><br />
+      <input type="submit" formnovalidate="formnovalidate" value="Submit without validation" />
+    </form>
+
+    <h4>input formtarget attribute</h4>
+
+    <form action="http://www.w3schools.com/html5/demo_form.asp">
+      First name: <input type="text" name="fname" /><br />
+      Last name: <input type="text" name="lname" /><br />
+      <input type="submit" value="Submit as normal" />
+      <input type="submit" formtarget="_blank" value="Submit to a new window" />
+    </form>
+
+    <h4>input height and width attributes</h4>
+
+    <input type="image" src="http://www.w3schools.com/html5/img_submit.git" alt="Submit" width="48" height="48" />
+
+    <h4>input list attribute</h4>
+
+    <input list="browsers" />
+    
+    <datalist id="browsers">
+      <option value="internet explorer" />
+      <option value="firefox" />
+      <option value="chrome" />
+      <option value="opera" />
+      <option value="safari" />
+    </datalist>
+
+    <h4>input min and max attributes</h4>
+
+    Enter a date before 1980-01-01:
+    <input type="date" name="bday" max="1979-12-31" /><br />
+    
+    Enter a date after 200-01-01:
+    <input type="date" name="bday" min="2000-01-02" /><br />
+
+    Quantity (between 1 and 5):
+    <input type="number" name="quantity" min="1" max="5" />
+
+    <h4>input multiple attribute</h4>
+
+    Select images: <input type="file" name="img" multiple="multiple" />
+
+    <h4>input pattern attribute</h4>
+
+    Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" />
+
+    <h4>input placeholder attribute</h4>
+
+    <input type="text" name="fname" placeholder="First name" />
+
+    <h4>input required attribute</h4>
+
+    Username: <input type="text" name="usrname" required="required" />
+
+    <h4>input step attribute</h4>
+
+    <input type="number" name="points" step="3" />
+
+  </body>
+
+</html>
